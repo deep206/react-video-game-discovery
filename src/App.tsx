@@ -10,14 +10,20 @@ function App() {
                 base: `"nav" "main"`, //base for mobile
                 lg: `"nav nav" "aside main"`, //for screens larger than 1024px
             }}
+            templateColumns={{
+                base: "1fr",
+                lg: "200px 1fr",
+            }}
         >
-            <GridItem area={"nav"}>
+            <GridItem area="nav">
                 <NavBar />
             </GridItem>
             <Show above="lg">
-                <GenreList />
+                <GridItem area="aside" paddingX={5}>
+                    <GenreList />
+                </GridItem>
             </Show>
-            <GridItem area={"main"}>
+            <GridItem area="main">
                 <GameGrid />
             </GridItem>
         </Grid>
