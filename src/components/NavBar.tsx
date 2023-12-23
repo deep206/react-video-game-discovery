@@ -5,7 +5,14 @@ import logo from "../assets/logo.webp";
 const NavBar = () => {
     return (
         <HStack>
-            <Image src={logo} boxSize="60px" />
+            <Image
+                src={logo}
+                boxSize="52px"
+                border="solid 2px slateblue"
+                borderRadius="15%"
+                margin="1px"
+                padding="1px"
+            />
             <Text>Lorem, ipsum dolor.</Text>
         </HStack>
     );
