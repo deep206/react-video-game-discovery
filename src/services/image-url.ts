@@ -1,4 +1,7 @@
+import noImage from "../assets/no-image.webp";
+
 const getCroppedImageUrl = (url: string) => {
+    if(!url) return noImage;
     const indexOfMedia = url.indexOf("media/") + "media/".length; //get index of media/ position including itself to slice string
     const newUrl = `${url.slice(0, indexOfMedia)}crop/600/400/${url.slice(indexOfMedia)}`; // add "/crop/width/height" for cropped image dimensions in between the index found
     return newUrl;
